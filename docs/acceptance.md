@@ -30,5 +30,6 @@ Run them on a **throw-away Home Assistant 2026.11 or newer** with demo data only
 
 ## Only after all of the above
 
+- Add a people-free screenshot of the test dashboard to the README, and remove `ignore: images` from the HACS check in CI.
 - Release with the JS file as a release asset.
 - A catalog (default list) request is a separate decision, and the README gets an install badge only once install, update and removal have passed here.
