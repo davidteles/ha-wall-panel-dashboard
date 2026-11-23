@@ -2,7 +2,13 @@
 
 A Home Assistant **dashboard strategy**: you create a new dashboard, pick *Wall Panel Kit (preview)*, choose one area, and it shows that area's lights as Home Assistant's built-in tile cards. A tablet layout (columns) or a phone layout (one column, full-width tiles).
 
-> **Preview: not installable yet.** This is an early prototype. It has not been released, and the Marketplace install has not been tested. Don't install it on a home you depend on.
+> **Preview: no release yet.** This is an early prototype. Installing it with *Add from link*, updating and removing it passed on a throw-away Home Assistant 2026.11.3 with demo data ([acceptance results](docs/acceptance.md#results)), but it has not been used in a real home. Don't rely on it yet.
+
+| Tablet | Phone |
+|---|---|
+| ![The Kitchen area's lights as tiles in two columns](docs/images/tablet.png) | ![The same lights as full-width tiles in one column](docs/images/phone.png) |
+
+<sub>Screenshots from a test Home Assistant with demo devices.</sub>
 
 ## How it relates to the Wall Panel Kit
 
@@ -29,7 +35,7 @@ This repo is a separate, much smaller experiment: a dashboard that Home Assistan
 
 Home Assistant **2026.11** or newer (the built-in Marketplace and the *Community dashboards* picker).
 
-## Using it (once released)
+## Using it
 
 1. **Settings → Marketplace → Add from link**, paste this repository's address, choose **Dashboard** if asked, then **Install**, and reload the browser.
 2. **Settings → Dashboards → Add dashboard → Community dashboards → Wall Panel Kit (preview)**.
