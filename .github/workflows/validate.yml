@@ -27,3 +27,7 @@ jobs:
       - uses: hacs/action@main
         with:
           category: plugin
+          # No README screenshot yet: a real one needs the acceptance run on a
+          # test Home Assistant (docs/acceptance.md). Remove this before asking
+          # for the default catalog, which requires images.
+          ignore: images
