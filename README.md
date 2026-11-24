@@ -8,7 +8,7 @@ A Home Assistant **dashboard strategy**: you create a new dashboard, pick *Wall 
 > - **Installable from a link:** Settings → Marketplace → *Add from link* with this repository's address (see [Using it](#using-it)).
 > - **Not in the default list yet:** the request to list it ([hacs/default#14833](https://github.com/hacs/default/pull/14833)) is open, so searching the Marketplace won't find it.
 >
-> Installing, updating and removing it passed on a throw-away Home Assistant 2026.11.3 with demo data ([acceptance results](docs/acceptance.md#results)). That run used the commit just before the release; the JavaScript file is byte-identical, but installing the published release itself is [still to be checked](docs/acceptance.md#released-file-v010). It has not been used in a real home. Don't rely on it yet.
+> Installing, updating and removing it passed on a throw-away Home Assistant 2026.11.3 with demo data ([acceptance results](docs/acceptance.md#results)). Installing the published v0.1.0 release itself passed too, on 2026-11-24 ([released-file checks](docs/acceptance.md#released-file-v010)). It has not been used in a real home. Don't rely on it yet.
 
 | Tablet | Phone |
 |---|---|
