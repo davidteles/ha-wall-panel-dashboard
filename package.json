@@ -1,6 +1,6 @@
 {
   "name": "ha-wall-panel-dashboard",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Wall Panel Kit dashboard strategy for Home Assistant (preview): one area's lights as tiles.",
   "type": "module",
   "private": true,
