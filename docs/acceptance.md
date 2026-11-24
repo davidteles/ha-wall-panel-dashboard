@@ -31,7 +31,7 @@ Run them on a **throw-away Home Assistant 2026.11 or newer** with demo data only
 ## Only after all of the above
 
 - Release with the JS file as a release asset. *Done: [v0.1.0](https://github.com/davidteles/ha-wall-panel-dashboard/releases/tag/v0.1.0), 2026-11-23.*
-- A catalog (default list) request is a separate decision, and the README gets an install badge only once install, update and removal have passed here. *Request open: [hacs/default#14833](https://github.com/hacs/default/pull/14833). Until it is merged, search is not an install path; use Add from link.*
+- A catalog (default list) request is a separate decision, and the README gets an install badge only once install, update and removal have passed here. *Merged 2026-11-24: [hacs/default#14833](https://github.com/hacs/default/pull/14833). Searching the Marketplace now finds it (checked in [run 3](#results)); Add from link still works as a fallback.*
 
 ## Released file (v0.1.0)
 
@@ -99,3 +99,13 @@ Notes, not defects:
 - The page had two `<script>` tags with the same module URL after opening the dashboards page and then *Add dashboard*. A module with one URL runs once, and there was one strategy entry.
 - The Marketplace page shows the README from the release tag, so it still says "Preview: no release yet" until a release made after that wording changed.
 
+**Run 3 · 2026-11-24 · release v0.1.1 (asset sha256 `bb5e9630…57b5`, identical to `dist/`) · Home Assistant 2026.11.3 · the Claude desktop app's browser · the same throw-away instance on 127.0.0.1, `demo` integration only**
+
+| Check | Result |
+|---|---|
+| Update from v0.1.0 | Pass. Installed v0.1.0, created a phone-layout test dashboard, then updated from the update dialog, which showed the v0.1.1 release notes. Still one `module` resource, now `…/ha-wall-panel-dashboard.js?v=1469368233-v0.1.1`; the served file has the v0.1.1 asset's sha256; the dashboard config was unchanged (`strategy: {type: custom:wall-panel-kit, area: kitchen, layout: phone}`) and rendered |
+| Marketplace page README | Pass. With nothing installed, the page shows the README of the latest release (v0.1.1) |
+| Delete and uninstall | Pass. Deleted the test dashboard, then **Uninstall**: no resources left |
+| Search after listing | Pass (after hacs/default#14833 was merged). Searching the Marketplace for "wall panel kit" lists *Wall Panel Kit (preview)* as a Dashboard; its menu has no "Remove" entry, so the result comes from the default list, not from the earlier link entry |
+
+Still open: no real home, no older Home Assistant or legacy HACS, no YAML-mode resources, no non-admin user.

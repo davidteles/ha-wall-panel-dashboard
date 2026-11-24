@@ -5,8 +5,7 @@ A Home Assistant **dashboard strategy**: you create a new dashboard, pick *Wall 
 > **Preview, v0.1.1.** Where it stands:
 >
 > - **Released:** [v0.1.1](https://github.com/davidteles/ha-wall-panel-dashboard/releases/latest), with `ha-wall-panel-dashboard.js` attached. It has the same code as v0.1.0; only the version number and these docs changed.
-> - **Installable from a link:** Settings → Marketplace → *Add from link* with this repository's address (see [Using it](#using-it)).
-> - **Not in the default list yet:** the request to list it ([hacs/default#14833](https://github.com/hacs/default/pull/14833)) is open, so searching the Marketplace won't find it.
+> - **In the Marketplace:** listed in the default list since 2026-11-24 ([hacs/default#14833](https://github.com/hacs/default/pull/14833)), so searching the Marketplace for *Wall Panel Kit* finds it (see [Using it](#using-it)).
 >
 > Installing, updating and removing it passed on a throw-away Home Assistant 2026.11.3 with demo data ([acceptance results](docs/acceptance.md#results)). Installing the published v0.1.0 release itself (the same code) passed too, on 2026-11-24 ([released-file checks](docs/acceptance.md#released-file-v010)). It has not been used in a real home. Don't rely on it yet.
 
@@ -24,7 +23,7 @@ This repo is a separate, much smaller experiment: a dashboard that Home Assistan
 
 | | Wall Panel Kit (generator) | This preview |
 |---|---|---|
-| How you get it | Run `tools/render.py`, paste YAML | Install from the Marketplace, then *Add dashboard* |
+| How you get it | Run `tools/render.py`, paste YAML | Search the Marketplace, install, then *Add dashboard* |
 | What it shows | Everything in the kit | One area's lights |
 | Extra cards needed | Yes (Mushroom, card-mod, …) | None, built-in tile cards only |
 | Status | Released | Preview (v0.1.1), demo-tested only |
@@ -43,7 +42,7 @@ Home Assistant **2026.11** or newer (the built-in Marketplace and the *Community
 
 ## Using it
 
-1. **Settings → Marketplace → Add from link**, paste this repository's address (`https://github.com/davidteles/ha-wall-panel-dashboard`), choose **Dashboard** if asked, then **Install**, and reload the browser.
+1. **Settings → Marketplace**, search for **Wall Panel Kit**, open *Wall Panel Kit (preview)*, then **Install**, and reload the browser. (If it doesn't show up yet, your Marketplace data may not have refreshed: use **Add from link** with this repository's address, `https://github.com/davidteles/ha-wall-panel-dashboard`, and choose **Dashboard** if asked.)
 2. **Settings → Dashboards → Add dashboard → Community dashboards → Wall Panel Kit (preview)**.
 3. Edit the new dashboard and choose an area and a layout.
 
