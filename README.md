@@ -2,9 +2,9 @@
 
 A Home Assistant **dashboard strategy**: you create a new dashboard, pick *Wall Panel Kit (preview)*, choose one area, and it shows that area's lights as Home Assistant's built-in tile cards. A tablet layout (tiles in columns) or a phone layout (full-width tiles).
 
-> **Preview, v0.1.1.** Where it stands:
+> **Preview, v0.1.2.** Where it stands:
 >
-> - **Released:** [v0.1.1](https://github.com/davidteles/ha-wall-panel-dashboard/releases/latest), with `ha-wall-panel-dashboard.js` attached. It has the same code as v0.1.0; only the version number and these docs changed.
+> - **Released:** [v0.1.2](https://github.com/davidteles/ha-wall-panel-dashboard/releases/latest), with `ha-wall-panel-dashboard.js` attached. It has the same code as v0.1.0; only the version number and these docs changed.
 > - **In the Marketplace:** listed in the default list since 2026-11-24 ([hacs/default#14833](https://github.com/hacs/default/pull/14833)), so searching the Marketplace for *Wall Panel Kit* finds it (see [Using it](#using-it)).
 >
 > Installing, updating and removing it passed on a throw-away Home Assistant 2026.11.3 with demo data ([acceptance results](docs/acceptance.md#results)). Installing the published v0.1.0 release itself (the same code) passed too, on 2026-11-24 ([released-file checks](docs/acceptance.md#released-file-v010)). It has not been used in a real home. Don't rely on it yet.
@@ -26,7 +26,7 @@ This repo is a separate, much smaller experiment: a dashboard that Home Assistan
 | How you get it | Run `tools/render.py`, paste YAML | Search the Marketplace, install, then *Add dashboard* |
 | What it shows | Everything in the kit | One area's lights |
 | Extra cards needed | Yes (Mushroom, card-mod, …) | None, built-in tile cards only |
-| Status | Released | Preview (v0.1.1), demo-tested only |
+| Status | Released | Preview (v0.1.2), demo-tested only |
 
 ## What it does, and what it never does
 

@@ -13,7 +13,7 @@
  * source and what the Marketplace installs.
  */
 
-export const VERSION = "0.1.1";
+export const VERSION = "0.1.2";
 export const STRATEGY_TYPE = "wall-panel-kit";
 export const ELEMENT_NAME = `ll-strategy-dashboard-${STRATEGY_TYPE}`;
 export const EDITOR_NAME = `${STRATEGY_TYPE}-dashboard-strategy-editor`;
