@@ -1,4 +1,4 @@
-# Acceptance checklist (before any release)
+# Acceptance checklist
 
 Unit tests (`npm test`) cover what `generate()` returns. These checks cover what they can't: the Marketplace install and how Home Assistant shows the dashboard.
 
@@ -30,8 +30,24 @@ Run them on a **throw-away Home Assistant 2026.11 or newer** with demo data only
 
 ## Only after all of the above
 
-- Release with the JS file as a release asset.
-- A catalog (default list) request is a separate decision, and the README gets an install badge only once install, update and removal have passed here.
+- Release with the JS file as a release asset. *Done: [v0.1.0](https://github.com/davidteles/ha-wall-panel-dashboard/releases/tag/v0.1.0), 2026-11-23.*
+- A catalog (default list) request is a separate decision, and the README gets an install badge only once install, update and removal have passed here. *Request open: [hacs/default#14833](https://github.com/hacs/default/pull/14833). Until it is merged, search is not an install path; use Add from link.*
+
+## Released file (v0.1.0)
+
+Run 1 below tested commit `d26dbda`, just before the release. Its `dist/ha-wall-panel-dashboard.js` is byte-identical to the v0.1.0 release asset (sha256 `4f6f599cbf556a24e6dc6a1ad60cce6d67f173b04a8c6bc173fac365146763d6`), but installing the published release itself has not been run yet. Same rules as above: a throw-away Home Assistant 2026.11 or newer with demo data only.
+
+- [ ] Add from link, then Install. The version offered is **v0.1.0**, not a commit.
+- [ ] The file served at `/local/community/ha-wall-panel-dashboard/ha-wall-panel-dashboard.js` has the sha256 above.
+- [ ] Exactly one `module` resource, and in the browser console `customStrategies.filter(s => s.type === 'wall-panel-kit').length` is `1`.
+- [ ] Community dashboards lists *Wall Panel Kit (preview)*. Create a **new** dashboard and choose an area and a layout.
+- [ ] Change the area to another one, then clear it: the dashboard follows each change, and clearing it shows "Choose an area" (not the old area).
+- [ ] Open the dashboard's address directly in a fresh tab (cold load): it renders with no errors.
+- [ ] Restart Home Assistant: still one resource, dashboard still there.
+- [ ] Toggle one demo light from a tile.
+- [ ] Delete the test dashboard, then Uninstall: the resource and files are gone.
+
+Record: tag and asset sha256 · Home Assistant version · browsers · each result · next action.
 
 ## Results
 
@@ -59,4 +75,4 @@ Test data: Kitchen with two demo lights on their devices, a template light that 
 
 Notes, not defects of this package: right after **Uninstall**, the repository page kept showing "installed" until the page was reloaded.
 
-Still open: no release yet (releases need the JS file as an asset), no real home, no older Home Assistant or legacy HACS, no YAML-mode resources, no non-admin user.
+Still open at the time of run 1 (2026-11-23, before v0.1.0 was published later that day): no release yet (releases need the JS file as an asset). Still open now: the [released-file checks](#released-file-v010), no real home, no older Home Assistant or legacy HACS, no YAML-mode resources, no non-admin user.
